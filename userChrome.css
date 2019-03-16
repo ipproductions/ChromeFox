@@ -1,0 +1,79 @@
+
+/* ROUNDED TABS */
+.tabbrowser-tab {
+    box-sizing: border-box;
+    border-radius: 7px 7px 0 0 !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-text.tab-label {
+    color: black !important;            
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+    border: 0px solid gray !important;  
+    border-bottom: none !important;
+    opacity: 1;
+}
+
+.tab-background {
+    border: none !important;
+    border-radius: 7px 7px 0 0 !important;
+    background: black;
+    opacity: .1;
+}
+
+.tab-line {                             
+    display: none !important;
+}
+
+.tabbrowser-tab[selected="true"]:hover {
+    border: none !important;
+}
+
+[tabsintitlebar]:root:not([extradragspace]) .tabbrowser-tab::after,
+.tabbrowser-tab:hover::after,
+#tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after {
+    border: none !important;                
+}
+/**/
+
+/* REDUCE LABEL TEXT FADE */
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]) {
+  mask-image: linear-gradient(to left, transparent, black 20px) !important;
+}
+/**/
+
+
+/* TAB DIVIDER TRANSP. FIX */
+.tabbrowser-tab::after { opacity:0.05 !important; }
+.titlebar-spacer[type="pre-tabs"] { opacity:0.05 !important; }
+/**/
+
+
+/* ROTATE ADD-ON BUTTON */
+#PlacesChevron, #nav-bar-overflow-button { transform: rotate(90deg) !important; }
+/**/
+
+
+/* FIX BOOKMARK BAR PADDING */
+:root[uidensity="compact"] toolbarbutton.bookmark-item:not(.subviewbutton) { padding:5px 10px !important; }
+/**/
+
+
+/* OVERLAY SCROLLBAR */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
+/**/
+
+
+/* WHITEFLASH FIX */
+#browser vbox#appcontent tabbrowser,
+#content, #tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html
+{ background: var(--in-content-page-background) !important }
+/**/
+
