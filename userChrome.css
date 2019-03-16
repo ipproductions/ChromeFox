@@ -59,6 +59,22 @@
 :root[uidensity="compact"] toolbarbutton.bookmark-item:not(.subviewbutton) { padding:5px 10px !important; }
 /**/
 
+/* BOOKMARK BAR ONLY ON NEW TAB */
+#main-window #PersonalToolbar {
+  visibility: collapse !important;
+}
+
+#main-window[title^="about:newtab"] #PersonalToolbar,
+#main-window[title^="New Tab"] #PersonalToolbar,
+#main-window[title^="Novo Separador"] #PersonalToolbar,
+#main-window[title^="Nightly"] #PersonalToolbar,
+#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+#main-window[title^="Firefox"] #PersonalToolbar,
+#main-window[title^="新标签页"] #PersonalToolbar {
+  visibility: visible !important;
+}
+/**/
+
 
 /* OVERLAY SCROLLBAR */
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
