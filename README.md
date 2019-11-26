@@ -11,3 +11,10 @@ These configuration files will provide the following Chrome-like appearance and 
 # How do I install it?
 
 Go to your Firefox profile folder (Help > Troubleshooting Info > Profile Directory) and place them inside your "chrome" folder (create a folder with that name if it's not already there).
+
+For Firefox 70 and higher, please change the value : ```toolkit.legacyUserProfileCustomizations.stylesheets``` to true.
+
+**1.** Load about:config in the Firefox address bar.
+**2.** Confirm that you will be careful.
+**3.** Search for toolkit.legacyUserProfileCustomizations.stylesheets using the search at the top.
+**4.** Toggle the preference. True means Firefox supports the CSS files, False that it ignores them.
