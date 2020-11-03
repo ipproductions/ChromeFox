@@ -5,10 +5,6 @@
     border-radius: 7px 7px 0 0 !important;
 }
 
-.tabbrowser-tab[selected="true"] .tab-text.tab-label {
-    color: black !important;            
-}
-
 .tabbrowser-tab[selected="true"] .tab-background {
     border: 0px solid gray !important;  
     border-bottom: none !important;
